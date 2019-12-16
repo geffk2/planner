@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtCore import QDateTime
 from PyQt5 import uic
 from planner import app
+from planner.__main__ import PATH
 import planner.db_model
 
 
@@ -9,7 +10,7 @@ class NewReminderWindow(QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        uic.loadUi('ui/new_reminder_window.ui', self)
+        uic.loadUi(PATH + '\\ui\\new_reminder_window.ui', self)
         self.setWindowTitle('Новое напоминание')
         self.dateTimeEdit.setDateTime(QDateTime.currentDateTime())
         self.reminder_name.textEdited.connect(self.name_edited)

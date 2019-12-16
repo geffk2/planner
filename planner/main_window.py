@@ -1,13 +1,15 @@
 from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem, QCheckBox
 from PyQt5 import uic
 from planner import db_model, new_reminder_window
+from planner.__main__ import PATH
 import datetime
+import os
 
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('ui/main_window.ui', self)
+        uic.loadUi(PATH + '\\ui\\main_window.ui', self)
 
         self.setWindowTitle('Планировщик')
         self.tableWidget.setColumnCount(4)
@@ -54,7 +56,7 @@ class MainWindow(QMainWindow):
 
     def show_about(self):
         self.about_window = QMainWindow()
-        uic.loadUi('ui/about.ui', self.about_window)
+        uic.loadUi(PATH + '\\ui\\about.ui', self.about_window)
         self.about_window.setWindowTitle('Справка')
         self.about_window.label.setText('Краткая справка по программе "планировщик":\n'
                                         '- В главном окне слева находится таблица, в которую выводятся напоминания, '
