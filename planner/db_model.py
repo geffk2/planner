@@ -1,8 +1,9 @@
 import sqlite3
 import uuid
 import datetime
-from planner.__main__ import PATH
+import os
 from PyQt5.QtCore import QDateTime
+from planner import __main__
 
 connection = None
 
@@ -78,4 +79,5 @@ def get_all_entries(group_by_status=False):
 
 def connect():
     global connection
-    connection = sqlite3.connect(PATH + '\\planner.db')
+    print(__main__.PATH + '\\planner.db')
+    connection = sqlite3.connect(__main__.PATH + '\\planner.db')

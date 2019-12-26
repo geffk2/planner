@@ -3,7 +3,6 @@ from PyQt5 import uic
 from planner import db_model, new_reminder_window
 from planner.__main__ import PATH
 import datetime
-import os
 
 
 class MainWindow(QMainWindow):
