@@ -1,2 +1,1 @@
-Для запуска под windows - run.bat в корне.
-Он запускает проект с помощью venv.
+Для запуска под windows - planner/dist/\_\_main__.exe

@@ -12,7 +12,7 @@ planner/*.so
 planner/.Python
 planner/build/
 planner/develop-eggs/
-planner/dist/
+#planner/dist/
 planner/downloads/
 planner/eggs/
 planner/.eggs/
